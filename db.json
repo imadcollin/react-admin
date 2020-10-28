@@ -1,8 +1,20 @@
 {
   "posts": [
-    { "id": "1", "title!": "title 1", "body": " some text here 1" },
-    { "id": "2", "title!": "title 2", "body": " some text here 2" },
-    { "id": "3", "title!": "title 3", "body": " some text here 3 " }
+    {
+      "id": "2",
+      "title": "title 2",
+      "body": " some text here 2"
+    },
+    {
+      "id": "3",
+      "title": "title 3",
+      "body": " some text here 3 "
+    },
+    {
+      "title": "Title 4",
+      "body": "Some data 4",
+      "id": "R1Dm6Kg"
+    }
   ],
   "user": [
     {
