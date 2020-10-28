@@ -2,13 +2,9 @@ import * as React from "react";
 import {
   List,
   Datagrid,
-  Edit,
-  DateField,
   TextField,
   EditButton,
   DeleteButton,
-  TextInput,
-  DateInput,
 } from "react-admin";
 
 const PostList = (props) => {

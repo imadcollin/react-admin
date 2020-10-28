@@ -1,6 +1,5 @@
 import {Admin , Resource } from 'react-admin';
 import restProvider from 'ra-data-simple-rest'; 
-import { render } from 'react-dom';
 
 import PostList from './Components/posts' 
 import PostCreate from "./Components/createPost"
