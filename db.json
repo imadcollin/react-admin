@@ -1,0 +1,19 @@
+{
+  "posts": [
+    { "id": "1", "title!": "title 1", "body": " some text here 1" },
+    { "id": "2", "title!": "title 2", "body": " some text here 2" },
+    { "id": "3", "title!": "title 3", "body": " some text here 3 " }
+  ],
+  "user": [
+    {
+      "id": "1",
+      "name": "bob",
+      "email": "bob@email.com"
+    },
+    {
+      "id": "2",
+      "name": "Moa",
+      "email": "Moa@email.com"
+    }
+  ]
+}
