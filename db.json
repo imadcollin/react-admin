@@ -9,6 +9,18 @@
       "id": "3",
       "title": "title 3",
       "body": " some text here 3 "
+    },
+    {
+      "userId": "2",
+      "title": "Moa is posting",
+      "body": "This is Moa´s post ",
+      "id": "z37qssY"
+    },
+    {
+      "userId": "1",
+      "title": "Bob post 1 ",
+      "body": "Bob post 1 ",
+      "id": "wOGK-Jp"
     }
   ],
   "users": [
