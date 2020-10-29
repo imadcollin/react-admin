@@ -1,43 +1,66 @@
 {
   "posts": [
     {
-      "id": "2",
-      "title": "title 2",
-      "body": " some text here 2"
+      "userId": "K1gmRnZ",
+      "title": "Pascal",
+      "id": "fLsevs9",
+      "body": "Pascal post made by Alice"
     },
     {
-      "id": "3",
-      "title": "title 3",
-      "body": " some text here 3 "
+      "userId": "Zlf00yB",
+      "title": "Java ",
+      "body": "Jave post made by Mike ",
+      "id": "-A54LZM"
     },
     {
-      "userId": "2",
-      "title": "Moa is posting",
-      "body": "This is Moa´s post ",
-      "id": "z37qssY"
+      "userId": "e6cb2CA",
+      "title": "C # ",
+      "body": "Csharp post made by Anke",
+      "id": "Yw9ajjw"
     },
     {
-      "userId": "1",
-      "title": "Bob post 1 ",
-      "body": "Bob post 1 ",
-      "id": "wOGK-Jp"
+      "userId": "qhtHX2N",
+      "title": "Python",
+      "body": "Python post made by Moa",
+      "id": "G5_2iUO"
+    },
+    {
+      "userId": "qhtHX2N",
+      "title": "Javascript",
+      "body": "Javascript post made by Moa",
+      "id": "1D8Nozh"
     }
   ],
   "users": [
     {
-      "id": "1",
-      "name": "bob",
-      "email": "bob@email.com"
+      "name": "Alice",
+      "email": "alice@gmail.com",
+      "id": "K1gmRnZ"
     },
     {
-      "id": "2",
-      "name": "Moa",
-      "email": "Moa@email.com"
+      "name": "Bob",
+      "email": "bob@gmail.com",
+      "id": "V91grSl"
     },
     {
-      "id": "2",
       "name": "Moa",
-      "email": "Moa@email.com"
+      "email": "moa@gmail.com",
+      "id": "qhtHX2N"
+    },
+    {
+      "name": "Anke",
+      "email": "anke@gmail.com",
+      "id": "e6cb2CA"
+    },
+    {
+      "name": "Jonas",
+      "email": "jonas@gmail.com",
+      "id": "sOOgUTt"
+    },
+    {
+      "name": "Mike",
+      "email": "mike@gmail.com",
+      "id": "Zlf00yB"
     }
   ],
   "comments": [
