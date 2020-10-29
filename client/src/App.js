@@ -6,12 +6,12 @@ import * as user from "./Components/Users/users"
 import * as comments from "./Components/Comments/comments"
 
 import authProvider from "./Services/authProvider"
-
+import dashboard from "./Components/Dashboard/dashboard"
 function App() {
   return (
     <div className="App">
       
-          <Admin authProvider={authProvider} dataProvider={restProvider('http://localhost:5000')}>
+          <Admin dashboard={dashboard} authProvider={authProvider} dataProvider={restProvider('http://localhost:5000')}>
             
         <Resource name="posts" list={posts.PostList}  create={posts.PostCreate} edit={posts.PostEdit} show={posts.PostShow}/>
         <Resource name="users" list={user.UserList} create={user.CreateUser} edit={user.UserEdit} show={user.ShowUsers}  />
