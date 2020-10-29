@@ -7,11 +7,13 @@ import * as comments from "./Components/Comments/comments";
 
 import authProvider from "./Services/authProvider";
 import dashboard from "./Components/Dashboard/dashboard";
+import NotFound from "./Components/404/NotFound"
 function App() {
   return (
     <div className="App">
       <Admin
         dashboard={dashboard}
+        catchAll={NotFound}
         authProvider={authProvider}
         dataProvider={jsonServerProvider("http://localhost:5000")}
       >
