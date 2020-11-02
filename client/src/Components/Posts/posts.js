@@ -1,4 +1,6 @@
 import * as React from "react";
+import { Children, cloneElement } from "react";
+
 import {
   List,
   Datagrid,
@@ -20,7 +22,16 @@ import {
   TabbedShowLayout,
   Tab,
   NumberField,
+  BulkDeleteButton,
+  BulkExportButton,
+  ShowButton,
 } from "react-admin";
+
+const PostListActionToolbar = ({ children, ...props }) => {
+  return (
+    <div>{Children.map(children, (button) => cloneElement(button, props))}</div>
+  );
+};
 
 const PostFilter = (props) => (
   <Filter {...props}>
@@ -33,7 +44,11 @@ const PostFilter = (props) => (
 
 const PostList = (props) => {
   return (
-    <List {...props} filters={<PostFilter />}>
+    <List
+      {...props}
+      
+      filters={<PostFilter />}
+    >
       <Datagrid>
         <TextField source="id" />
         <ReferenceField label="User" source="userId" reference="users">
@@ -43,6 +58,10 @@ const PostList = (props) => {
         <TextField source="body" />
         <EditButton basePath="/posts" />
         <DeleteButton basePath="/posts" />
+        <PostListActionToolbar>
+          <EditButton />
+          <ShowButton />
+        </PostListActionToolbar>
       </Datagrid>
     </List>
   );
