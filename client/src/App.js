@@ -1,6 +1,9 @@
 import { Admin, Resource } from "react-admin";
 import jsonServerProvider from "ra-data-json-server";
 
+import UserIcon from '@material-ui/icons/People';
+import PostIcon from '@material-ui/icons/Book';
+
 import * as posts from "./Components/Posts/posts";
 import * as user from "./Components/Users/users";
 import * as comments from "./Components/Comments/comments";
@@ -8,14 +11,29 @@ import * as comments from "./Components/Comments/comments";
 import authProvider from "./Services/authProvider";
 import dashboard from "./Components/Dashboard/dashboard";
 import NotFound from "./Components/404/NotFound"
+
+import polyglotI18nProvider from 'ra-i18n-polyglot';
+import englishMessages from "./Services/english";
+import frenchMessages from "./Services/french";
+
 function App() {
+  const dataProvider=jsonServerProvider("http://localhost:5000"); 
+  
+  
+  const messages = {
+      'fr': frenchMessages,
+      'en': englishMessages
+  };
+  const i18nProvider = polyglotI18nProvider(locale => messages["fr"]);
   return (
     <div className="App">
       <Admin
         dashboard={dashboard}
         catchAll={NotFound}
         authProvider={authProvider}
-        dataProvider={jsonServerProvider("http://localhost:5000")}
+        dataProvider={dataProvider}
+        i18nProvider={i18nProvider}
+
       >
         <Resource
           name="posts"
@@ -23,6 +41,8 @@ function App() {
           create={posts.PostCreate}
           edit={posts.PostEdit}
           show={posts.PostShow}
+          icon={PostIcon}
+
         />
         <Resource
           name="users"
@@ -30,6 +50,7 @@ function App() {
           create={user.CreateUser}
           edit={user.UserEdit}
           show={user.ShowUsers}
+          icon={UserIcon}
         />
         <Resource
           name="comments"
