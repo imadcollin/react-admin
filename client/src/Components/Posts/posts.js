@@ -17,6 +17,9 @@ import {
   Create,
   Filter,
   SearchInput,
+  TabbedShowLayout,
+  Tab,
+  NumberField,
 } from "react-admin";
 
 const PostFilter = (props) => (
@@ -73,14 +76,28 @@ const PostEdit = (props) => {
   );
 };
 
-const PostShow = (props) => {
-  return (
-    <Show title="Show a Post" {...props}>
-      <SimpleShowLayout>
+const PostShow = (props) => (
+  <Show {...props}>
+    <TabbedShowLayout>
+      <Tab label="summary">
+        <TextField label="Id" source="id" />
         <TextField source="title" />
-        <RichTextField source="body" />
-      </SimpleShowLayout>
-    </Show>
-  );
-};
+      </Tab>
+      <Tab label="body" path="body">
+        <RichTextField source="body" addLabel={false} />
+      </Tab>
+      <Tab label="Users" path="userId">
+        <RichTextField source="name" addLabel={false} />
+      </Tab>
+      <Tab label="Miscellaneous" path="miscellaneous">
+        <TextField
+          label="Password (if protected post)"
+          source="password"
+          type="password"
+        />
+        <NumberField source="average_note" />
+      </Tab>
+    </TabbedShowLayout>
+  </Show>
+);
 export { PostList, PostShow, PostEdit, PostCreate };
