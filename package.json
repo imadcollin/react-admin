@@ -14,7 +14,8 @@
   "dependencies": {
     "concurrently": "^5.3.0",
     "json-server": "^0.16.2",
-    "ra-data-json-server": "^3.9.5"
+    "ra-data-json-server": "^3.9.5",
+    "ra-language-french": "^3.9.5"
   },
   "proxy": "localhost:5000"
 }

@@ -24,7 +24,8 @@ function App() {
       'fr': frenchMessages,
       'en': englishMessages
   };
-  const i18nProvider = polyglotI18nProvider(locale => messages["fr"]);
+  const i18nProvider = polyglotI18nProvider(locale => messages[locale]);
+
   return (
     <div className="App">
       <Admin
@@ -38,9 +39,9 @@ function App() {
         <Resource
           name="posts"
           list={posts.PostList}
+          show={posts.PostShow}
           create={posts.PostCreate}
           edit={posts.PostEdit}
-          show={posts.PostShow}
           icon={PostIcon}
 
         />
