@@ -81,13 +81,24 @@
   "comments": [
     {
       "id": "1",
-      "body": "The first comment is made",
+      "userId": "Zlf00yB",
+      "postId": "Yw9ajjw",
+      "body": "Second comment",
       "createAt": "2020-04-05"
     },
     {
       "id": "2",
+      "userId": "K1gmRnZ",
+      "postId": "Yw9ajjw",
       "body": "The Second comment is made",
       "createAt": "2020-04-06"
+    },
+    {
+      "createAt": "2020-11-03T09:56:01.163Z",
+      "userId": "sOOgUTt",
+      "postId": "Yw9ajjw",
+      "body": "Jonas wrote a comment",
+      "id": "xff3kA9"
     }
   ]
 }
