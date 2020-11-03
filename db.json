@@ -4,63 +4,78 @@
       "userId": "K1gmRnZ",
       "title": "Pascal",
       "id": "fLsevs9",
-      "body": "Pascal post made by Alice"
+      "body": "Pascal post made by Alice",
+      "commentable": true
     },
     {
       "userId": "Zlf00yB",
       "title": "Java ",
       "body": "Jave post made by Mike ",
-      "id": "-A54LZM"
+      "id": "-A54LZM",
+      "commentable": false
     },
     {
       "userId": "e6cb2CA",
       "title": "C # ",
       "body": "Csharp post made by Anke",
-      "id": "Yw9ajjw"
+      "id": "Yw9ajjw",
+      "commentable": true
     },
     {
       "userId": "qhtHX2N",
       "title": "Python",
       "body": "Python post made by Moa",
-      "id": "G5_2iUO"
+      "id": "G5_2iUO",
+      "commentable": true
     },
     {
       "userId": "qhtHX2N",
       "title": "Javascript",
       "body": "Javascript post made by Moa",
-      "id": "1D8Nozh"
+      "id": "1D8Nozh",
+      "commentable": false
     }
   ],
   "users": [
     {
       "name": "Alice",
       "email": "alice@gmail.com",
-      "id": "K1gmRnZ"
+      "id": "K1gmRnZ",
+      "password": "xxx",
+      "avatar": "./Assets/1"
     },
     {
       "name": "Bob",
       "email": "bob@gmail.com",
-      "id": "V91grSl"
+      "id": "V91grSl",
+      "password": "xxx",
+      "avatar": "./Assets/2"
     },
     {
       "name": "Moa",
       "email": "moa@gmail.com",
-      "id": "qhtHX2N"
+      "id": "qhtHX2N",
+      "password": "xxx",
+      "avatar": "./Assets/1"
     },
     {
       "name": "Anke",
       "email": "anke@gmail.com",
-      "id": "e6cb2CA"
+      "id": "e6cb2CA",
+      "password": "xxx",
+      "avatar": "./Assets/1"
     },
     {
       "name": "Jonas",
       "email": "jonas@gmail.com",
-      "id": "sOOgUTt"
+      "id": "sOOgUTt",
+      "password": "xxx"
     },
     {
       "name": "Mike",
       "email": "mike@gmail.com",
-      "id": "Zlf00yB"
+      "id": "Zlf00yB",
+      "password": "xxx"
     }
   ],
   "comments": [

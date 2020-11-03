@@ -22,9 +22,9 @@ import {
   TabbedShowLayout,
   Tab,
   NumberField,
-  BulkDeleteButton,
-  BulkExportButton,
   ShowButton,
+  BooleanField,
+  BooleanInput,
 } from "react-admin";
 
 const PostListActionToolbar = ({ children, ...props }) => {
@@ -44,11 +44,7 @@ const PostFilter = (props) => (
 
 const PostList = (props) => {
   return (
-    <List
-      {...props}
-      
-      filters={<PostFilter />}
-    >
+    <List {...props} filters={<PostFilter />}>
       <Datagrid>
         <TextField source="id" />
         <ReferenceField label="User" source="userId" reference="users">
@@ -56,12 +52,12 @@ const PostList = (props) => {
         </ReferenceField>
         <TextField source="title" />
         <TextField source="body" />
-        <EditButton basePath="/posts" />
-        <DeleteButton basePath="/posts" />
+        <BooleanField source="commentable" label="Comments" sortable={false} />
         <PostListActionToolbar>
-          <EditButton />
+          <EditButton basePath="/posts" />
           <ShowButton />
         </PostListActionToolbar>
+        <DeleteButton basePath="/posts" />
       </Datagrid>
     </List>
   );
@@ -76,6 +72,7 @@ const PostCreate = (props) => {
         </ReferenceInput>
         <TextInput source="title"></TextInput>
         <TextInput multiline source="body"></TextInput>
+        <BooleanInput source="commentable" defaultValue />
       </SimpleForm>
     </Create>
   );
@@ -90,6 +87,7 @@ const PostEdit = (props) => {
         </ReferenceInput>
         <TextInput source="title"></TextInput>
         <TextInput multiline source="body"></TextInput>
+        <BooleanInput source="commentable" defaultValue />
       </SimpleForm>
     </Edit>
   );
@@ -101,6 +99,7 @@ const PostShow = (props) => (
       <Tab label="summary">
         <TextField label="Id" source="id" />
         <TextField source="title" />
+        <BooleanField source="commentable" defaultValue />
       </Tab>
       <Tab label="body" path="body">
         <RichTextField source="body" addLabel={false} />
