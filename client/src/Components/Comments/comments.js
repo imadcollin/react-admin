@@ -6,7 +6,6 @@ import {
   Edit,
   Show,
   SimpleShowLayout,
-  RichTextField,
   SimpleForm,
   TextInput,
   DateInput,

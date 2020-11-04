@@ -1,9 +1,14 @@
 const authProvider = {
   login: ({ username, password }) => {
+  
     localStorage.setItem("username", username);
     localStorage.setItem("password", password);
     return Promise.resolve();
   },
+  getIdentity: () => {
+    const  fullName  = localStorage.getItem('username');
+    return {fullName };
+},
   logout: () => {
     localStorage.removeItem("username");
     localStorage.removeItem("password");

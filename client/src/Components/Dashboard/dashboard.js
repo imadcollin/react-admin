@@ -1,11 +1,14 @@
 import * as React from "react";
-import { Card, CardContent, CardHeader } from "@material-ui/core";
-
+import { Card, CardHeader } from "@material-ui/core";
 import LocaleSwitcher from "../../Services/langSwitch"
-export default () => (
+import RatingPosts from "./Rating"
+const DashBoard = () => {
+return (
   <Card>
     <CardHeader title="Welcome to the administration" />
-    <CardContent>Lorem ipsum sic dolor amet...</CardContent>
     <LocaleSwitcher></LocaleSwitcher>
+    <RatingPosts></RatingPosts>
   </Card>
-);
+)}
+
+export default DashBoard;
