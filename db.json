@@ -5,35 +5,40 @@
       "title": "Pascal",
       "id": "fLsevs9",
       "body": "Pascal post made by Alice",
-      "commentable": true
+      "commentable": true,
+      "rating": 2
     },
     {
       "userId": "Zlf00yB",
       "title": "Java ",
       "body": "Jave post made by Mike ",
       "id": "-A54LZM",
-      "commentable": false
+      "commentable": false,
+      "rating": 4
     },
     {
       "userId": "e6cb2CA",
       "title": "C # ",
       "body": "Csharp post made by Anke",
       "id": "Yw9ajjw",
-      "commentable": true
+      "commentable": true,
+      "rating": 1
     },
     {
       "userId": "qhtHX2N",
       "title": "Python",
       "body": "Python post made by Moa",
       "id": "G5_2iUO",
-      "commentable": true
+      "commentable": true,
+      "rating": 3
     },
     {
       "userId": "qhtHX2N",
       "title": "Javascript",
       "body": "Javascript post made by Moa",
       "id": "1D8Nozh",
-      "commentable": false
+      "commentable": false,
+      "rating": 5
     }
   ],
   "users": [

@@ -90,7 +90,7 @@ const RatingPosts = () => {
         <TabPanel key={id} value={id} index={id}>
           <Box component="fieldset" mb={3} borderColor="transparent">
             <Typography component="legend"> {data[id].title} </Typography>
-            <Rating name="read-only" value={(parseInt(data[id].id)+1)} readOnly />
+            <Rating name="read-only" value={data[id]?(parseInt(data[id].rating)):0} readOnly />
           </Box>
         </TabPanel>
       ))}
