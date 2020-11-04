@@ -1,13 +1,11 @@
 import * as React from "react";
-import { Component, useState } from "react";
-import Button from "@material-ui/core/Button";
-import { useLocale, useSetLocale } from "react-admin";
+import { useState } from "react";
+import { useSetLocale } from "react-admin";
 
 import Switch from "@material-ui/core/Switch";
 
 const LocaleSwitcher = () => {
-    const locale = useLocale();
-    const setLocale = useSetLocale();
+  const setLocale = useSetLocale();
 
   const [state, setState] = useState({
     checkedA: true,
@@ -17,22 +15,23 @@ const LocaleSwitcher = () => {
   const handleChange = (event) => {
     console.log("clicker ", state);
     setState({ ...state, [event.target.name]: event.target.checked });
-   state.checkedB? setLocale("en") : setLocale("fr");
+    state.checkedB ? setLocale("en") : setLocale("fr");
   };
-
-
   return (
-    <div>
-     <span>En/Fr</span> <span>
+    <div style={{float:"right"}}>
+      <span>English or French</span>{" "}
+     
         <Switch
           checked={state.checkedB}
           onChange={handleChange}
           color="primary"
+          label="End"
+          labelPlacement="end"
           name="checkedB"
           inputProps={{ "aria-label": "primary checkbox" }}
         />
-      </span>
-      </div>
+      
+    </div>
   );
 };
 
