@@ -13,8 +13,8 @@ import dashboard from "./Components/Dashboard/dashboard";
 import NotFound from "./Components/404/NotFound"
 
 import polyglotI18nProvider from 'ra-i18n-polyglot';
-import englishMessages from "./Services/english";
-import frenchMessages from "./Services/french";
+import englishMessages from "./Languages/english";
+import frenchMessages from "./Languages/french";
 
 function App() {
   const dataProvider=jsonServerProvider("http://localhost:5000"); 

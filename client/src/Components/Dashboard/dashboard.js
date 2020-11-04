@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Card, CardHeader } from "@material-ui/core";
-import LocaleSwitcher from "../../Services/langSwitch"
+import LocaleSwitcher from "../../Languages/langSwitch"
 import RatingPosts from "./Rating"
 const DashBoard = () => {
 return (
