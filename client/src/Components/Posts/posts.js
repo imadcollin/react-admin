@@ -19,11 +19,15 @@ import {
   Filter,
   TabbedShowLayout,
   Tab,
-  NumberField,
+  FunctionField,
   ShowButton,
   BooleanField,
   BooleanInput,
 } from "react-admin";
+
+import Rating from "@material-ui/lab/Rating";
+import Typography from "@material-ui/core/Typography";
+import Box from "@material-ui/core/Box";
 
 const PostListActionToolbar = ({ children, ...props }) => {
   return (
@@ -86,34 +90,47 @@ const PostEdit = (props) => {
         <TextInput source="title"></TextInput>
         <TextInput multiline source="body"></TextInput>
         <BooleanInput source="commentable" defaultValue />
+        <FunctionField
+          label="Name"
+          source="rating"
+          render={(record) => record.rating * 5}
+        />
       </SimpleForm>
     </Edit>
   );
 };
 
-const PostShow = (props) => (
-  <Show {...props}>
-    <TabbedShowLayout>
-      <Tab label="summary">
-        <TextField label="Id" source="id" />
-        <TextField source="title" />
-        <BooleanField source="commentable" defaultValue />
-      </Tab>
-      <Tab label="body" path="body">
-        <RichTextField source="body" addLabel={false} />
-      </Tab>
-      <Tab label="Users" path="userId">
-        <RichTextField source="name" addLabel={false} />
-      </Tab>
-      <Tab label="Miscellaneous" path="miscellaneous">
-        <TextField
-          label="Password (if protected post)"
-          source="password"
-          type="password"
-        />
-        <NumberField source="average_note" />
-      </Tab>
-    </TabbedShowLayout>
-  </Show>
-);
+const PostShow = (props) => {
+  const [value, setValue] = React.useState(2);
+
+  return (
+    <Show {...props}>
+      <SimpleForm>
+        <TabbedShowLayout>
+          <Tab label="summary">
+            <TextField source="title" />
+            <RichTextField source="body" />
+            <BooleanField source="commentable" defaultValue />
+
+            {/* <FunctionField
+              label="Rating"
+              source="rating"
+              render={(record) => value}
+            /> */}
+          </Tab>
+        </TabbedShowLayout>
+        <Box component="fieldset" mb={3} borderColor="transparent">
+          <Typography component="legend">Rating</Typography>
+          <Rating
+            name="simple-controlled"
+            value={value}
+            onChange={(event, newValue) => {
+              setValue(newValue);
+            }}
+          />
+        </Box>
+      </SimpleForm>
+    </Show>
+  );
+};
 export { PostList, PostShow, PostEdit, PostCreate };
