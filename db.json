@@ -47,40 +47,49 @@
       "email": "alice@gmail.com",
       "id": "K1gmRnZ",
       "password": "xxx",
-      "avatar": "./Assets/1"
+      "avatar": "./client/src/img/1.png",
+      "lastSeen": "2020-04-05"
+
     },
     {
       "name": "Bob",
       "email": "bob@gmail.com",
       "id": "V91grSl",
       "password": "xxx",
-      "avatar": "./Assets/2"
+      "avatar": "./client/src/img/1.png",
+      "lastSeen": "2020-04-05"
     },
     {
       "name": "Moa",
       "email": "moa@gmail.com",
       "id": "qhtHX2N",
       "password": "xxx",
-      "avatar": "./Assets/1"
+      "avatar": "./client/src/img/1.png",
+      "lastSeen": "2020-04-05"
     },
     {
       "name": "Anke",
       "email": "anke@gmail.com",
       "id": "e6cb2CA",
       "password": "xxx",
-      "avatar": "./Assets/1"
+      "avatar": "./client/src/img/1.png",
+      "lastSeen": "2020-04-05"
     },
     {
       "name": "Jonas",
       "email": "jonas@gmail.com",
       "id": "sOOgUTt",
-      "password": "xxx"
+      "password": "xxx",
+      "avatar": "./client/src/img/1.png",
+      "lastSeen": "2020-04-02"
     },
     {
       "name": "Mike",
       "email": "mike@gmail.com",
       "id": "Zlf00yB",
-      "password": "xxx"
+      "password": "xxx",
+      "avatar": "./client/src/img/1.png",
+      "lastSeen": "2020-04-01"
     }
   ],
   "comments": [
@@ -89,14 +98,14 @@
       "userId": "Zlf00yB",
       "postId": "Yw9ajjw",
       "body": "Second comment",
-      "createAt": "2020-04-05"
+      "createAt": "2020-01-05"
     },
     {
       "id": "2",
       "userId": "K1gmRnZ",
       "postId": "Yw9ajjw",
       "body": "The Second comment is made",
-      "createAt": "2020-04-06"
+      "createAt": "2020-01-06"
     },
     {
       "createAt": "2020-11-03T09:56:01.163Z",

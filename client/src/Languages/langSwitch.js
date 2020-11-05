@@ -19,7 +19,11 @@ const LocaleSwitcher = () => {
   };
   return (
     <div style={{float:"right"}}>
-      <span>English or French</span>{" "}
+      <span  style={{
+          fontSize: "xx-large",
+          color: "cornflowerblue",
+          fontFamily: "none",
+        }}>Eng/Fr</span>{" "}
      
         <Switch
           checked={state.checkedB}

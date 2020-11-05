@@ -49,6 +49,9 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     backgroundColor: theme.palette.background.paper,
+    "& > *": {
+      margin: theme.spacing(-1),
+    },
   },
 }));
 
