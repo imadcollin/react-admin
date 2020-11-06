@@ -21,10 +21,10 @@ const LocaleSwitcher = () => {
   const setLocale = useSetLocale();
 
   const classes = useStyles();
-  const [lang, setLang] = useState("");
+  const [lang, setLang] = useState("En");
   const handleChange2 = (event) => {
     setLang(event.target.value);
-    lang === "En" ? setLocale("en") : setLocale("fr");
+    lang === "En" ? setLocale("fr") : setLocale("en");
   };
 
   return (

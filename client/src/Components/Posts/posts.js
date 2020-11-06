@@ -91,9 +91,9 @@ const PostEdit = (props) => {
         <TextInput multiline source="body"></TextInput>
         <BooleanInput source="commentable" defaultValue />
         <FunctionField
-          label="Name"
+          label="Rating"
           source="rating"
-          render={(record) => record.rating * 5}
+          render={(record) => record.rating}
         />
       </SimpleForm>
     </Edit>
