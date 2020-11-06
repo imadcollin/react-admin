@@ -26,7 +26,7 @@ const authProvider = {
   checkAuth: () => {
     return localStorage.getItem("username")
       ? Promise.resolve()
-      : Promise.reject({ redirectTo: "/no-access" });
+      : Promise.reject({ redirectTo: "/login" });
   },
   getPermissions: () => Promise.resolve(),
 };
