@@ -70,7 +70,6 @@ const RatingPosts = () => {
   );
   const x = ids.map((id) => data[id]);
   localStorage.setItem("posts", x);
-  console.log(x);
   if (loading) {
     return <Loading />;
   }
@@ -85,13 +84,13 @@ const RatingPosts = () => {
           onChange={handleChange}
           aria-label="simple tabs example"
         >
-          <Tab label="Post Rating" {...a11yProps(0)} />
+          <Tab label="Latest Posts Rating" {...a11yProps(0)} />
         </Tabs>
       </AppBar>
 
       {ids.map((id) => (
         <TabPanel key={id} value={id} index={id}>
-          <Box component="fieldset" mb={3} borderColor="transparent">
+          <Box component="fieldset" mb={1} borderColor="transparent">
             <Typography component="legend">
               {" "}
               {data[id] ? data[id].title : " "}{" "}
