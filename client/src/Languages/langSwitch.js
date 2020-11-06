@@ -2,39 +2,50 @@ import * as React from "react";
 import { useState } from "react";
 import { useSetLocale } from "react-admin";
 
-import Switch from "@material-ui/core/Switch";
+import { makeStyles } from "@material-ui/core/styles";
+
+import MenuItem from "@material-ui/core/MenuItem";
+import FormControl from "@material-ui/core/FormControl";
+import Select from "@material-ui/core/Select";
+
+const useStyles = makeStyles((theme) => ({
+  margin: {
+    margin: theme.spacing(1),
+    marginTop:"-90%",
+    marginLeft:"-70%",
+  },
+
+}));
 
 const LocaleSwitcher = () => {
   const setLocale = useSetLocale();
 
-  const [state, setState] = useState({
-    checkedA: true,
-    checkedB: false,
-  });
-
-  const handleChange = (event) => {
-    console.log("clicker ", state);
-    setState({ ...state, [event.target.name]: event.target.checked });
-    state.checkedB ? setLocale("en") : setLocale("fr");
+  const classes = useStyles();
+  const [lang, setLang] = useState("");
+  const handleChange2 = (event) => {
+    setLang(event.target.value);
+    lang === "En" ? setLocale("en") : setLocale("fr");
   };
+
   return (
-    <div style={{float:"right"}}>
-      <span  style={{
-          fontSize: "xx-large",
-          color: "cornflowerblue",
-          fontFamily: "none",
-        }}>Eng/Fr</span>{" "}
-     
-        <Switch
-          checked={state.checkedB}
-          onChange={handleChange}
-          color="primary"
-          label="End"
-          labelPlacement="end"
-          name="checkedB"
-          inputProps={{ "aria-label": "primary checkbox" }}
-        />
-      
+    <div style={{ float: "right" }}>
+      <div>
+        <FormControl className={classes.margin}>
+          <p style={{ color: "cornflowerblue", fontFamily: "none" }}>
+            Language
+          </p>
+          <Select
+            labelId="demo-simple-select-label"
+            id="demo-simple-select"
+            displayEmpty
+            value={lang}
+            onChange={handleChange2}
+          >
+            <MenuItem value={"En"}>En</MenuItem>
+            <MenuItem value={"Fr"}>Fr</MenuItem>
+          </Select>
+        </FormControl>
+      </div>
     </div>
   );
 };
