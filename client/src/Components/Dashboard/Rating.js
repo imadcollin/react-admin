@@ -1,5 +1,5 @@
 import * as React from "react";
-import {Loading } from "react-admin";
+import { Loading } from "react-admin";
 
 import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
@@ -92,13 +92,23 @@ const RatingPosts = () => {
       {ids.map((id) => (
         <TabPanel key={id} value={id} index={id}>
           <Box component="fieldset" mb={3} borderColor="transparent">
-          <Typography component="legend"> {data[id]?data[id].title:" " } </Typography>
-            <Rating name="read-only" value={data[id]?(parseInt(data[id].rating)):0} readOnly />
-          <Typography component="legend"> {data[id]?data[id].body:""} </Typography>
+            <Typography component="legend">
+              {" "}
+              {data[id] ? data[id].title : " "}{" "}
+            </Typography>
+            <Rating
+              name="read-only"
+              value={data[id] ? parseInt(data[id].rating) : 0}
+              readOnly
+            />
+            <Typography component="legend">
+              {" "}
+              {data[id] ? data[id].body : " "}{" "}
+            </Typography>
           </Box>
         </TabPanel>
       ))}
- 
+
       <div></div>
     </div>
   );
